@@ -256,7 +256,7 @@ export default class FilesController {
   }
 
   /**
-   * Retrieves the content of a file
+   * Retrieves the content of a file..
    * @param {Request} req The Express request object.
    * @param {Response} res The Express response object.
    */
