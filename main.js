@@ -1,4 +1,3 @@
-main.js
 import dbClient from './utils/db';
 
 const waitConnection = () => {
