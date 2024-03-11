@@ -1,5 +1,5 @@
-/* eslint-disable import/no-named-as-default */
-/* eslint-disable no-unused-vars */
+/* Documentation */
+/* Documentation */
 import { tmpdir } from 'os';
 import { promisify } from 'util';
 import Queue from 'bull/lib/queue';
