@@ -1,3 +1,4 @@
+/* eslint-disable import/no-named-as-default */
 /* eslint-disable no-unused-vars */
 import { tmpdir } from 'os';
 import { promisify } from 'util';
@@ -95,6 +96,8 @@ export default class FilesController {
     const baseDir = `${process.env.FOLDER_PATH || ''}`.trim().length > 0
       ? process.env.FOLDER_PATH.trim()
       : joinPath(tmpdir(), DEFAULT_ROOT_FOLDER);
+    // default baseDir == '/tmp/files_manager'
+    // or (on Windows) '%USERPROFILE%/AppData/Local/Temp/files_manager';
     const newFile = {
       userId: new mongoDBCore.BSON.ObjectId(userId),
       name,
@@ -256,7 +259,7 @@ export default class FilesController {
   }
 
   /**
-   * Retrieves the content of a file..
+   * Retrieves the content of a file.
    * @param {Request} req The Express request object.
    * @param {Response} res The Express response object.
    */
